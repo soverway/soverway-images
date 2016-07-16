@@ -20,15 +20,15 @@ def region3x3(img, x, y):
 
 	# Broken into rows
 	list.append(getpixel(img, x-1, y-1))
-	list.append(getpixel(img, x, y-1))
-	list.append(getpixel(img, x+1, y-1))
+	list.append(getpixel(img, x, y-1))    #North, index is 1
+	list.append(getpixel(img, x+1, y-1)) 
 
-	list.append(getpixel(img, x-1, y))
-	list.append(getpixel(img, x, y))
-	list.append(getpixel(img, x+1, y))
+	list.append(getpixel(img, x-1, y))  #West index is 3
+	list.append(getpixel(img, x, y))    #Center index is 4
+	list.append(getpixel(img, x+1, y))  #East index is 5
 
 	list.append(getpixel(img, x-1, y+1))
-	list.append(getpixel(img, x, y+1))
+	list.append(getpixel(img, x, y+1))  #South index is 7
 	list.append(getpixel(img, x+1, y+1)) 
 
 	return list

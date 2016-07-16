@@ -59,7 +59,7 @@ filename = sys.argv[1]
 img = Image.open(filename)
 img = img.convert("L")
 img.show()
-
-blur(img).show() # call your flip function
+img = blur(img)
+img.show() # call your blur function
 
 #img.show()

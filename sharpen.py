@@ -11,14 +11,15 @@ def laplace(data):
 	return north + east + south + west - 4*middle
 
 def minus(A, B):
-	Apixels = A.load()
+	aCopy = A.copy()
+	Apixels = aCopy.load()
 	Bpixels = B.load()
 	width, height = A.size #width and height of image
 
 	for i in range(width):
 		for j in range(height):
 			Apixels[i, j] -= Bpixels[i, j]
-	return A		
+	return aCopy
 
 img = open(sys.argv)
 img.show()
