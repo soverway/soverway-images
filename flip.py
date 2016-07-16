@@ -11,10 +11,10 @@ def flip(img):
 		j = width - 1
 		k = 0
 		while (j >= 0):
-			originalMatrix[k,i] = flippedMatrix[j,i]
+			flippedMatrix[k,i] = originalMatrix[j,i]
 			j -= 1
 			k += 1
-	return img
+	return imgCopy
 
 
 
@@ -26,6 +26,6 @@ img = Image.open(filename)
 img = img.convert("L")
 img.show()
 
-flip(img) # call your flip function
+img = flip(img) # call your flip function
 
 img.show()
